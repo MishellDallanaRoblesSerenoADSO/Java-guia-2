@@ -1,49 +1,28 @@
 addEventListener("DOMContentLoaded",()=>{
-    // 3. Desarrollar un diagrama que lea 3 valores diferentes e indique cual es el mayor de ellos, el menor o
-    //si son iguales.
+    // 4. Cálculo de áreas - Elige una figura geométrica:" Triángulo y Círculo
+    //¿Qué figura quiere calcular (Escriba T o C)?
+    //Triangulo = base * altura / 2
+    //Circulo = PI * radio* radio
     
     // Datos
-    let num1= Number(prompt("Ingrese el primer valor: ",53))
-    let num2= Number(prompt("Ingrese el segundo valor: ",53))
-    let num3= Number(prompt("Ingrese el tercer valor: ",78))
+    let f= String(prompt("¿que figura quiere calcular t o c?: "))
     
-    //Condicion para el numero mayor
+    //Triangulo
 
-    if (num1>num2 && num1>num3){
-        console.log(`El numero 1 es mayor`)
+    if (f=="t"){
+        alert("Calcular area de un triangulo")
+        base= Number(prompt("Coloca la base del triangulo: "))
+        h= Number(prompt("Coloca la altura del triangulo: "))
+        area= base*h/2
+        console.log(`El area del triangulo es: "${area}"`)
     
-    }else if (num2>num1 && num2>num3) {
-        console.log(`El numero 2 es mayor`)
-        
-    }else if(num3>num1 && num3>num2) {
-        console.log(`El numero 3 es mayor`)
-    } 
-    
-    // Condicion para el numero menor
-
-    if (num1<num2 || num1<num3){
-        console.log(`El numero 1 es menor`)
-    
-    } else if (num2<num1 || num2<num3){
-    console.log(`El numero 2 es menor`)
-
-    } else if (num3<num1 || num3<num2){
-    console.log(`El numero 2 es menor`)
+    }else if (f=="c"){
+        alert("Calcular area de un circulo")
+        r=Number(prompt("Coloca el radio del circulo: "))
+        area2= (Math.PI)*r*r
+        console.log(`El area del circulo es: "${area2}"`)
     }
-
-    //Condicion si el numero es igual
-
-    if (num1==num2){
-    console.log(`El numero 1 es igual al numero 2`)
+        
     
-    }else if (num1==num3){
-        console.log(`El numero 1 es igual al numero 3`)
-    
-    }else if (num2==num1){
-        console.log(`El numero 2 es igual al numero 1`)
-    
-    }else if (num2==num3){
-        console.log(`El numero 2 es igual al numero 3`)
-    }       
 })
 
