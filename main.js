@@ -1,24 +1,24 @@
 addEventListener("DOMContentLoaded",()=>{
-    // 7. Calcular todos los pagos hechos de un restaurante y que si el consumo ingresado excede los
-    //$130.000 el descuento será del 15%, de lo contrario no hay descuento.
-
-    
+    // 8. En cierta empresa se les paga a sus trabajadores de la siguiente forma: si el empleado es de planta,
+    //la hora trabajada se le paga a $20000, si el empleado es administrativo, la hora trabajada se le paga
+    //a $10000. Para calcular su pago es necesario conocer el total de horas trabajadas.
+        
     // Datos
-    let fac= Number(prompt("Valor total de la factura del restaurante: "))
+    let trb= String(prompt("¿El trabajador es de (p)planta o (a)administrativo?: "))
     
-    //Si el valor es mayor a 130000
+    //Si el trabajador es de planta
 
-    if (fac>130000){
-        alert("¡Felicidades!, obtienes un descuento del 15%")
-        des=fac*0.15
-        total=fac-des
-        console.log(`Valor total de la factura es: "${total}"`)
+    if (trb=="p"){
+        ht1=Number(prompt("Horas trabajadas del empeado de planta: "))
+        h1=20000*ht1
+        console.log(`El pago por horas del trabajador de planta es: "${h1}"`)
     }
 
     //Si el valor es menor a 130000
-    if (fac<130000){
-        alert("Lo siento, esta vez no tienes descuento.")
-        console.log(`Valor total de la factura es: "${fac}"`)
+    if (trb=="a"){
+        ht2=Number(prompt("Horas trabajadas del empeado administrativo: "))
+        h2=10000*ht2
+        console.log(`El pago por horas del trabajador administrativo es: "${h2}"`)
     }
     
 })
