@@ -1,19 +1,20 @@
 addEventListener("DOMContentLoaded",()=>{
-    //11. Programa para solicitar el nombre, apellido, edad y la nota promedio de 5 estudiantes de un curso
-    //de computación.
+    //12. Restarle al primer número al segundo (siempre y cuando el primero sea mayor que él segundo, en
+    //caso contrario indicar con un mensaje que la operación no es posible realizarla.
+
     
     
     //Datos
-    let nom=prompt(" Coloque su nombre y apellido: ")
-    let edad=Number(prompt("Coloque su edad: ",17))
-    let n1=Number(prompt("Coloca la nota 1: ",8))
-    let n2=Number(prompt("Coloca la nota 2: ",6))
-    let ne=Number(prompt("Coloca la nota del examen: ",7))
-    let nf=Number(prompt("Coloca la nota final: ",7))
+    let num1=Number(prompt("Coloca el numero 1: ",18))
+    let num2=Number(prompt("Coloca el numero 2: ",11))
     
     //codigo
-    prom=(n1+n2+ne+nf)/4
-    console.log(`La nota del estudiante "${nom}", es de "${prom}"`)
+    if (num1 > num2){
+        resta=num1 - num2
+        console.log(`El resultado de la resta es: "${resta}"`)
+    
+    }else
+    alert("No es posible realizar la resta")
     
 })
 
